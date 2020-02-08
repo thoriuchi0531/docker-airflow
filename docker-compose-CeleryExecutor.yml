@@ -32,8 +32,11 @@ services:
         volumes:
             - ./dags:/usr/local/airflow/dags
             - ./script_python:/usr/local/airflow/script_python
+            - /var/run/docker.sock:/var/run/docker.sock
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
+        group_add:
+            - ${DOCKER_GROUP}
         ports:
             - "8080:8080"
         command: webserver
