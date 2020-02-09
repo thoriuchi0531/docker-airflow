@@ -86,11 +86,17 @@ services:
             - scheduler
         volumes:
             - ./dags:/usr/local/airflow/dags
+            - ./script_python:/usr/local/airflow/script_python
+            - /var/run/docker.sock:/var/run/docker.sock
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
+        group_add:
+            - ${DOCKER_GROUP}
         environment:
             - FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
             - EXECUTOR=Celery
+            - HOST_HOME=$HOME
+            - MONGODB_HOST=$MONGODB_HOST
             # - POSTGRES_USER=airflow
             # - POSTGRES_PASSWORD=airflow
             # - POSTGRES_DB=airflow
