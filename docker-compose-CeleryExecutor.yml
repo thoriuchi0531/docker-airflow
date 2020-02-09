@@ -26,6 +26,7 @@ services:
             - FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
             - EXECUTOR=Celery
             - HOST_HOME=$HOME
+            - MONGODB_HOST=$MONGODB_HOST
             # - POSTGRES_USER=airflow
             # - POSTGRES_PASSWORD=airflow
             # - POSTGRES_DB=airflow
