@@ -26,6 +26,7 @@ services:
             - EXECUTOR=Celery
             - HOST_HOME=$HOST_HOME
             - MONGODB_HOST=$MONGODB_HOST
+            - MONGODB_BACKUP=$MONGODB_BACKUP
             # - POSTGRES_USER=airflow
             # - POSTGRES_PASSWORD=airflow
             # - POSTGRES_DB=airflow
@@ -93,6 +94,7 @@ services:
             - EXECUTOR=Celery
             - HOST_HOME=$HOST_HOME
             - MONGODB_HOST=$MONGODB_HOST
+            - MONGODB_BACKUP=$MONGODB_BACKUP
             # - POSTGRES_USER=airflow
             # - POSTGRES_PASSWORD=airflow
             # - POSTGRES_DB=airflow
