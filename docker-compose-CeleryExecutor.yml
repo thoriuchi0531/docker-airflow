@@ -86,6 +86,8 @@ services:
             - ./dags:/usr/local/airflow/dags
             - ./script_python:/usr/local/airflow/script_python
             - /var/run/docker.sock:/var/run/docker.sock
+            - $MONGODB_BACKUP:/usr/local/airflow/mongodb_backup
+            - /usr/bin:/usr/local/airflow/bin
             # Uncomment to include custom plugins
             # - ./plugins:/usr/local/airflow/plugins
         group_add:
