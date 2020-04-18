@@ -74,7 +74,8 @@ services:
             - EXECUTOR=Celery
             - MONGODB_HOST=$MONGODB_HOST
             - MONGODB_BACKUP=$MONGODB_BACKUP
-            - AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT=36000 
+            - AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT=36000
+            - PYTHONPATH=/usr/local/airflow
             # - POSTGRES_USER=airflow
             # - POSTGRES_PASSWORD=airflow
             # - POSTGRES_DB=airflow
@@ -101,7 +102,8 @@ services:
             - HOST_HOME=$HOST_HOME
             - MONGODB_HOST=$MONGODB_HOST
             - MONGODB_BACKUP=$MONGODB_BACKUP
-            - AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT=36000 
+            - AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT=36000
+            - PYTHONPATH=/usr/local/airflow
             # - POSTGRES_USER=airflow
             # - POSTGRES_PASSWORD=airflow
             # - POSTGRES_DB=airflow
