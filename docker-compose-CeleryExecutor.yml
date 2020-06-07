@@ -16,7 +16,8 @@ services:
             - ./pgdata:/var/lib/postgresql/data/pgdata
 
     webserver:
-        image: docker-airflow:1.10.8
+        image: puckel/docker-airflow:1.10.9
+        restart: always
         depends_on:
             - postgres
             - redis
@@ -52,7 +53,8 @@ services:
             retries: 3
 
     flower:
-        image: docker-airflow:1.10.8
+        image: puckel/docker-airflow:1.10.9
+        restart: always
         depends_on:
             - redis
         environment:
@@ -63,7 +65,8 @@ services:
         command: flower
 
     scheduler:
-        image: docker-airflow:1.10.8
+        image: puckel/docker-airflow:1.10.9
+        restart: always
         depends_on:
             - webserver
         volumes:
@@ -85,7 +88,8 @@ services:
         command: scheduler
 
     worker:
-        image: docker-airflow:1.10.8
+        image: puckel/docker-airflow:1.10.9
+        restart: always
         depends_on:
             - scheduler
         volumes:
