@@ -109,6 +109,8 @@ services:
             - MONGODB_HOST=$MONGODB_HOST
             - MONGODB_BACKUP=$MONGODB_BACKUP
             - SLACK_API_TOKEN=$SLACK_API_TOKEN
+            - BINANCE_API=$BINANCE_API
+            - BINANCE_SECRET=$BINANCE_SECRET
             - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
             - AIRFLOW__CELERY__RESULT_BACKEND=db+postgresql://airflow:airflow@postgres/airflow
             - AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT=36000 
