@@ -114,6 +114,7 @@ services:
             - BINANCE_SECRET=$BINANCE_SECRET
             - TRADIER_TOKEN=$TRADIER_TOKEN
             - TRADIER_TOKEN2=$TRADIER_TOKEN2
+            - QUANDL_API_KEY=$QUANDL_API_KEY
             - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
             - AIRFLOW__CELERY__RESULT_BACKEND=db+postgresql://airflow:airflow@postgres/airflow
             - AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT=36000 
